@@ -90,7 +90,7 @@ public class MkCommandAddIP {
                     cellData1 = (String) getCellFormatValue(row.getCell(0)); // 获取当前行IP
                     // 判断告警次数是否大于cnt
                     if ( Integer.parseInt(String.valueOf(row.getCell(1))) > cnt){
-                        System.out.println( Integer.parseInt(String.valueOf(row.getCell(1))) + ": " + cellData1);
+                        System.out.println( Integer.parseInt(String.valueOf(row.getCell(1))) + "\t:\t " + cellData1);
                         map1.put(columns[0],cellData1);
                         list1.add(map1);
                     }
