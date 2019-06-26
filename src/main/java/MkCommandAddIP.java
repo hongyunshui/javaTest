@@ -24,7 +24,7 @@ public class MkCommandAddIP {
         String filePath1 = "C:\\Users\\hys\\Desktop\\IP封堵\\command.txt";
         String columns[] = {"IP地址","告警次数","告警时间","来源","封禁状态","报告时间","序号"};
         int alert_num = 9; // 告警阈值默认值
-        writeExcelToTxt(readFilePath,columns, 50,filePath1,alert_num); // 生成执行命令到脚本
+        mkComdToTxt(readFilePath,columns, 50,filePath1,alert_num); // 生成执行命令到脚本
     }
     /**
      * 读取 excel 内容到列表
@@ -89,6 +89,7 @@ public class MkCommandAddIP {
                 if(row !=null){
                     cellData1 = (String) getCellFormatValue(row.getCell(0)); // 获取当前行IP
                     // 判断告警次数是否大于cnt
+
                     if ( Integer.parseInt(String.valueOf(row.getCell(1))) > cnt){
                         System.out.println( Integer.parseInt(String.valueOf(row.getCell(1))) + "\t:\t " + cellData1);
                         map1.put(columns[0],cellData1);
@@ -109,7 +110,7 @@ public class MkCommandAddIP {
      * @param denyjy_num 起始的主机组编号
      * @param writeFilePath 要写入的文件路径及名称
      */
-    static void writeExcelToTxt(String readFilePath, String columns[], int denyjy_num, String writeFilePath, int alert_num){
+    static void mkComdToTxt(String readFilePath, String columns[], int denyjy_num, String writeFilePath, int alert_num){
         List<Map<String,String>> list ;
         String command = null;
         int cnt =0;
