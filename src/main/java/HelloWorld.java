@@ -11,5 +11,6 @@ public class HelloWorld {
         int alert_num = 9;  //此值是多少就代表要抽取“告警次数大于多少的IP”来生成命令
         int denyjy_num = 30; // 此值是主机组名称的起始编号“denyjyXX”
         MkCommandAddIP.mkComdToTxt(readFilePath,columns,denyjy_num,writeFilePath1,alert_num); //调用此函数即可生成命令
+
     }
 }
