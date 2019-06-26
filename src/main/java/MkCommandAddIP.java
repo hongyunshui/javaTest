@@ -22,7 +22,7 @@ public class MkCommandAddIP {
     public static void main(String[] args) {
         String readFilePath = "C:\\Users\\hys\\Desktop\\IP封堵\\封堵6.12\\封禁表截至目前所有合并0612.xls";
         String filePath1 = "C:\\Users\\hys\\Desktop\\IP封堵\\command.txt";
-        String columns[] = {"IP地址","告警次数","告警时间","来源","封禁状态","报告时间","序号"}; //
+        String columns[] = {"IP地址","告警次数","告警时间","来源","封禁状态","报告时间","序号"};
         int alert_num = 9; // 告警阈值默认值
         mkComdToTxt(readFilePath,columns, 50,filePath1,alert_num); // 生成执行命令到脚本
     }
